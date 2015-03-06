@@ -17,7 +17,7 @@ module.exports = {
     'firebase': firebaseRef,
     'plans': {
         //defines the plans that are available
-        "3000": {
+        '3000': {
             "description": "Compact Plan",
             "merchant_preferences": {
                 "auto_bill_amount": "yes",
@@ -27,7 +27,7 @@ module.exports = {
                 "return_url": return_url,
                 "setup_fee": {
                     "currency": "SGD",
-                    "value": "30.00"
+                    "value": "30"
                 }
             },
             "name": "Compact Plan",
@@ -131,7 +131,7 @@ module.exports = {
                     "cycles": "1",
                     "frequency": "MONTH",
                     "frequency_interval": "1",
-                    "name": "Trial 2",
+                    "name": "Trial 3",
                     "type": "TRIAL"
                 }
             ],
