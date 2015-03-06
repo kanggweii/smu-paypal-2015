@@ -58,10 +58,10 @@ p {
 
     .banner-head {
         display: table-cell;
-        vertical-align: middle;
+        vertical-align: left;
         margin-bottom: 0;
         font-size: 2em;
-        color: black;
+        color: white;
         font-weight: 500;
         text-shadow: 0 1px 1px black;
     }
