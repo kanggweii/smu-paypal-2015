@@ -27,7 +27,7 @@ module.exports = {
                 "return_url": return_url,
                 "setup_fee": {
                     "currency": "SGD",
-                    "value": "30.00"
+                    "value": "30"
                 }
             },
             "name": "Compact Plan",
@@ -96,7 +96,7 @@ module.exports = {
                 }
             ],
             "type": "INFINITE"
-        }
+        },
         '30000': {
             "description": "Herculean Plan",
             "merchant_preferences": {
