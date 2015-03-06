@@ -149,7 +149,21 @@ module.exports = {
     //creates billing agreement data based on the tier and address
     'createAgreementData': function(tier, planId, address){
         return {
-            "name": tier == '2999'? "Compact Plan": "Beefy Plan",
+            "name"": ""
+            "description": ""
+            if(tier=='3000'){
+                "name"": "Compact Plan"
+                "description": "Compact Plan"
+            } else if(tier=='5000'){
+                "name": "Beefy Plan"
+                "description": "Beefy Plan"
+            } else if(tier=='30000'){
+                "name": "Herculean Plan"
+                "description": "Herculean Plan"
+            }
+            
+            
+            "name": tier == '3000'? "Compact Plan": "Beefy Plan",
             "description": tier == '2999'? "Compact Plan": "Beefy Plan",
             "start_date": getStartDate(),
             "plan":{
