@@ -58,7 +58,8 @@ p {
 
     .banner-head {
         display: table-cell;
-        vertical-align: left;
+        vertical-align: center;
+        text-align: left;
         margin-bottom: 0;
         font-size: 2em;
         color: white;
