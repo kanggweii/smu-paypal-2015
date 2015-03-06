@@ -30,13 +30,11 @@ app.get('/payment/create-plan', function (req, res) {
                 }
                 var plan = "";
                 //sets the plan id based on the plan name sent to PayPal
-                if(billingPlan.name == "Compact Plan"){
-                    plan = "3000";
-                } else if(billingPlan.name == "Beefy Plan"){
-                    plan = "9000";
+                if(billingPlan.name == "Regular Plan"){
+                    plan = "2999";
                 }
                 else{
-                    plan = "30000";
+                    plan = "5999";
                 }
                 //stores the PayPal Plan ID to your plan id mapping in Firebase
                 model.firebase.child('/plans').child('/' + plan).set({'id': billingPlan.id});
