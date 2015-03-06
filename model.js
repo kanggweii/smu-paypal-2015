@@ -17,7 +17,7 @@ module.exports = {
     'firebase': firebaseRef,
     'plans': {
         //defines the plans that are available
-        '3000': {
+        "3000": {
             "description": "Compact Plan",
             "merchant_preferences": {
                 "auto_bill_amount": "yes",
@@ -27,7 +27,7 @@ module.exports = {
                 "return_url": return_url,
                 "setup_fee": {
                     "currency": "SGD",
-                    "value": "30"
+                    "value": "30.00"
                 }
             },
             "name": "Compact Plan",
@@ -96,7 +96,7 @@ module.exports = {
                 }
             ],
             "type": "INFINITE"
-        },
+        }
         '30000': {
             "description": "Herculean Plan",
             "merchant_preferences": {
@@ -131,7 +131,7 @@ module.exports = {
                     "cycles": "1",
                     "frequency": "MONTH",
                     "frequency_interval": "1",
-                    "name": "Trial 3",
+                    "name": "Trial 2",
                     "type": "TRIAL"
                 }
             ],
@@ -149,22 +149,8 @@ module.exports = {
     //creates billing agreement data based on the tier and address
     'createAgreementData': function(tier, planId, address){
         return {
-            "name"": ""
-            "description": ""
-            if(tier=='3000'){
-                "name"": "Compact Plan"
-                "description": "Compact Plan"
-            } else if(tier=='5000'){
-                "name": "Beefy Plan"
-                "description": "Beefy Plan"
-            } else if(tier=='30000'){
-                "name": "Herculean Plan"
-                "description": "Herculean Plan"
-            }
-            
-            
-            "name": tier == '3000'? "Compact Plan": "Beefy Plan",
-            "description": tier == '2999'? "Compact Plan": "Beefy Plan",
+            "name": tier == '2999'? "Regular Plan": "Premium Plan",
+            "description": tier == '2999'? "Regular Plan": "Premium Plan",
             "start_date": getStartDate(),
             "plan":{
                 "id": planId
