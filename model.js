@@ -17,8 +17,8 @@ module.exports = {
     'firebase': firebaseRef,
     'plans': {
         //defines the plans that are available
-        "2999": {
-            "description": "Regular Plan",
+        "3000": {
+            "description": "Compact Plan",
             "merchant_preferences": {
                 "auto_bill_amount": "yes",
                 "cancel_url": cancel_url,
@@ -27,26 +27,26 @@ module.exports = {
                 "return_url": return_url,
                 "setup_fee": {
                     "currency": "SGD",
-                    "value": "0"
+                    "value": "30.00"
                 }
             },
-            "name": "Regular Plan",
+            "name": "Compact Plan",
             "payment_definitions": [
                 {
                     "amount": {
                         "currency": "SGD",
-                        "value": "29.99"
+                        "value": "30"
                     },
-                    "cycles": "0",
+                    "cycles": "1",
                     "frequency": "MONTH",
                     "frequency_interval": "1",
-                    "name": "Regular 1",
+                    "name": "Compact 1",
                     "type": "REGULAR"
                 },
                 {
                     "amount": {
                         "currency": "SGD",
-                        "value": "19.99"
+                        "value": "30"
                     },
                     "cycles": "1",
                     "frequency": "MONTH",
@@ -57,8 +57,8 @@ module.exports = {
             ],
             "type": "INFINITE"
         },
-        '5999': {
-            "description": "Premium Plan",
+        '9000': {
+            "description": "Beefy Plan",
             "merchant_preferences": {
                 "auto_bill_amount": "yes",
                 "cancel_url": cancel_url,
@@ -67,26 +67,26 @@ module.exports = {
                 "return_url": return_url,
                 "setup_fee": {
                     "currency": "SGD",
-                    "value": "0"
+                    "value": "90"
                 }
             },
-            "name": "Premium Plan",
+            "name": "Beefy Plan",
             "payment_definitions": [
                 {
                     "amount": {
                         "currency": "SGD",
-                        "value": "59.99"
+                        "value": "90"
                     },
                     "cycles": "0",
                     "frequency": "MONTH",
                     "frequency_interval": "1",
-                    "name": "Premium 1",
+                    "name": "Beefy 1",
                     "type": "REGULAR"
                 },
                 {
                     "amount": {
                         "currency": "SGD",
-                        "value": "39.99"
+                        "value": "90"
                     },
                     "cycles": "1",
                     "frequency": "MONTH",
@@ -96,7 +96,47 @@ module.exports = {
                 }
             ],
             "type": "INFINITE"
-        }  
+        },
+        '30000': {
+            "description": "Herculean Plan",
+            "merchant_preferences": {
+                "auto_bill_amount": "yes",
+                "cancel_url": cancel_url,
+                "initial_fail_amount_action": "continue",
+                "max_fail_attempts": "1",
+                "return_url": return_url,
+                "setup_fee": {
+                    "currency": "SGD",
+                    "value": "300"
+                }
+            },
+            "name": "Herculean Plan",
+            "payment_definitions": [
+                {
+                    "amount": {
+                        "currency": "SGD",
+                        "value": "300"
+                    },
+                    "cycles": "0",
+                    "frequency": "MONTH",
+                    "frequency_interval": "1",
+                    "name": "Herculean 1",
+                    "type": "REGULAR"
+                },
+                {
+                    "amount": {
+                        "currency": "SGD",
+                        "value": "300"
+                    },
+                    "cycles": "1",
+                    "frequency": "MONTH",
+                    "frequency_interval": "1",
+                    "name": "Trial 2",
+                    "type": "TRIAL"
+                }
+            ],
+            "type": "INFINITE"
+        }
     },
     //defines the data required to activate the plan
     'activatePlan':[{
